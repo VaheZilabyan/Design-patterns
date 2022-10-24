@@ -1,4 +1,4 @@
-s#include <iostream>
+#include <iostream>
 #include <string>
 
 typedef int Cable; // wire with electrons :-)
