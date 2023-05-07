@@ -83,3 +83,67 @@ int main()
     std::cout<<"!!!!!!!!!!Got the Pizza!!!!!!!!!"<<std::endl;
     return 0;
 }
+
+
+/*
+// aveli parz tarberak
+#include <iostream>
+using namespace std;
+
+class Transport {   //interface
+public:
+    virtual void deliver() = 0;
+    virtual ~Transport() {}
+};
+
+class Truck : public Transport {
+public:
+    void deliver() {
+        cout << "texapoxver Truck-ov\n";
+    }
+};
+
+class Ship : public Transport {
+public:
+    void deliver() {
+        cout << "texapoxver Ship-ov\n";
+    }
+};
+
+class Logistics {
+public:
+    void planDelivery() {
+        cout << "katarvum en bernapoxadrumner\n";
+    }
+    virtual Transport* createTransport() const = 0;
+    virtual ~Logistics() {}
+};
+
+class RoadLogistics : public Logistics {
+public:
+    Transport* createTransport() const override {
+        return new Truck();
+    }
+};
+
+class SeaLogistics : public Logistics {
+public:
+    Transport* createTransport() const override {
+        return new Ship();
+    }
+};
+
+int main()
+{
+    Logistics *Logistics = new RoadLogistics;
+    Transport *transport = Logistics->createTransport();
+    transport->deliver();
+
+    return 0;
+}
+
+
+*/
+
+
+
