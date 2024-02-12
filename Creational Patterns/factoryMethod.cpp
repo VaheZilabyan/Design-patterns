@@ -145,5 +145,88 @@ int main()
 
 */
 
+/*
+#include <iostream>
+#include <string>
+using namespace std;
 
+class Button {   //interface
+public:
+    virtual void click() = 0;
+    virtual string get_title() = 0;
+    virtual ~Button() {}
+};
+
+class Windows_Button : public Button {
+    string title = "";
+public:
+    Windows_Button(const string& s) : title(s) {} 
+    void click() {
+        cout << "Clicked Windows_Button\n";
+    }
+    string get_title() {
+        return title;
+    }
+};
+
+class HTML_Button : public Button {
+    string title = "";
+public:
+    HTML_Button(const string& s) : title(s) {} 
+    void click() {
+        cout << "Clicked HTML_Button\n";
+    }
+    string get_title() {
+        return title;
+    }
+};
+
+class Linux_Button : public Button {
+    string title = "";
+public:
+    Linux_Button(const string& s) : title(s) {} 
+    void click() {
+        cout << "Clicked Linux_Button\n";
+    }
+    string get_title() {
+        return title;
+    }
+};
+
+class Dialog {
+public:
+    virtual Button* createButton() const = 0;
+    virtual ~Dialog() {}
+};
+
+class Windows_Dialog : public Dialog {
+public:
+    Button* createButton() const override {
+        return new Windows_Button("win button");
+    }
+};
+
+class HTML_Dialog : public Dialog {
+public:
+    Button* createButton() const override {
+        return new HTML_Button("html button");
+    }
+};
+
+class Linux_Dialog : public Dialog {
+public:
+    Button* createButton() const override {
+        return new Linux_Button("linux button");
+    }
+};
+
+int main()
+{
+    Windows_Dialog *wd = new Windows_Dialog;
+    
+    Button *button = wd->createButton();
+    button->click();
+    cout << button->get_title() << endl;
+}
+*/
 
